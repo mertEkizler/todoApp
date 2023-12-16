@@ -6,8 +6,8 @@ export class Model{
         this.user = "Mert";
         this.items = [
             new ToDoItem("Spor", true),
-            new ToDoItem("Kahvalti", false),
-            new ToDoItem("Kitap", false),
+            new ToDoItem("Kahvalti", true),
+            new ToDoItem("Kitap", true),
             new ToDoItem("Sinema", false)
           ];
     }

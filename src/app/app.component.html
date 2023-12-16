@@ -5,9 +5,9 @@
           [{{getName()}}] To Do List
         </h3>
         <div class="input-group">
-          <input type="text" class="form-control">
+          <input type="text" #todoText class="form-control">
           <div class="input-group-append">
-            <button class="btn btn-primary">Add</button>
+            <button class="btn btn-primary" (click)="addItem(todoText.value); todoText.value='';">Add</button>
           </div>
         </div>
 
@@ -24,6 +24,9 @@
             let i=index;">
                 <td>{{i+1}}</td>
                 <td>{{item.description}}</td>
+                <td>
+                  <input type="checkbox" [(ngModel)]="item.action">
+                </td>
                 <td [ngSwitch]="item.action">
                     <span *ngSwitchCase="true">
                         Yes
